@@ -1,0 +1,6 @@
+﻿Using Creatinal Design Pattern
+
+	- When the system configuration needs to create various objects: These patterns can dynamically decide the class of an object that needs to be created based on the configuration or environment.
+	- When families of related objects are designed to be used together: Ensuring that objects that need to work together can be created using a particular design pattern.
+	- When you want to hide the implementation of an object pool: Managing the initialization and recycling of objects that are expensive to create (like connections to a database).
+	- Resource Management: Applications need to efficiently manage expensive or complex resources, ensuring that instances are created only when necessary and according to the current context.
