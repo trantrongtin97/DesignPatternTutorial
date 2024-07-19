@@ -1,6 +1,6 @@
 ﻿namespace DesignPattern.StructuralDesignPattern.ProxyDesignPattern.RemoteProxyDesignPattern
 {
-    public class ExampleRemoteProxyPattern
+    public class ExampleRemoteProxyDesignPattern
     {
         
         public void Run()

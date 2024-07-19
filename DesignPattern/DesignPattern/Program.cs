@@ -11,6 +11,8 @@ using DesignPattern.StructuralDesignPattern.CompositeDesignPattern;
 using DesignPattern.StructuralDesignPattern.DecoratorDesignPattern;
 using DesignPattern.StructuralDesignPattern.FacadeDesignPattern;
 using DesignPattern.StructuralDesignPattern.FlyweightDesignPattern;
+using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.CacheProxyDesignPattern;
+using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.LoggingProxyDesignPattern;
 using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.RemoteProxyDesignPattern;
 using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.VirtualProxyDesignPattern;
 
@@ -75,5 +77,13 @@ ExampleVirsualProxyDesignPattern exampleVirsualProxyDesignPattern = new ExampleV
 exampleVirsualProxyDesignPattern.Run();
 
 Console.WriteLine("**************************************************************************************************");
-ExampleRemoteProxyPattern exampleRemoteProxyPattern = new ExampleRemoteProxyPattern();
+ExampleRemoteProxyDesignPattern exampleRemoteProxyPattern = new ExampleRemoteProxyDesignPattern();
 exampleRemoteProxyPattern.Run();
+
+Console.WriteLine("**************************************************************************************************");
+ExampleCacheProxyDesignPattern exampleCacheProxyDesignPattern = new ExampleCacheProxyDesignPattern();
+exampleCacheProxyDesignPattern.Run();
+
+Console.WriteLine("**************************************************************************************************");
+ExampleLoggingProxyDesignPattern exampleLoggingProxyDesignPattern = new ExampleLoggingProxyDesignPattern();
+exampleLoggingProxyDesignPattern.Run();
