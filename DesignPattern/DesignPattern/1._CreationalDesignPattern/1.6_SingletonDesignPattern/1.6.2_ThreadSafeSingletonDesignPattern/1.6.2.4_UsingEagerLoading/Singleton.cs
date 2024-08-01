@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingEagerLoading
+﻿namespace DesignPattern.CreationalDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingEagerLoading
 {
     public sealed class Singleton
     {

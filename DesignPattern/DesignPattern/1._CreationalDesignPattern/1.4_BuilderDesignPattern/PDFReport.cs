@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.BuilderDesignPattern
+﻿namespace DesignPattern.CreationalDesignPattern.BuilderDesignPattern
 {
     public class PDFReport : ReportBuilder
     {

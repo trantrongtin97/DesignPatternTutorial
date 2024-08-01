@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingLazy
+﻿namespace DesignPattern.CreationalDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingLazy
 {
     public sealed class Singleton
     {

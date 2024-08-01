@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Object.Interface;
 
-namespace DesignPattern.FactoryDesignPattern.FactoryMethodDesignPattern
+namespace DesignPattern.CreationalDesignPattern.FactoryMethodDesignPattern
 {
     public class ExampleFactoryMethodDesignPattern
     {

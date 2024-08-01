@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.DoubleCheckLocking
+﻿namespace DesignPattern.CreationalDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.DoubleCheckLocking
 {
     public sealed class Singleton
     {

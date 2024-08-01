@@ -1,8 +1,8 @@
-﻿using DesignPattern.FactoryDesignPattern.AbstractFactoryDesignPattern.Interface;
+﻿using DesignPattern.CreationalDesignPattern.AbstractFactoryDesignPattern.Interface;
 using DesignPattern.Object;
 using DesignPattern.Object.Interface;
 
-namespace DesignPattern.FactoryDesignPattern.AbstractFactoryDesignPattern
+namespace DesignPattern.CreationalDesignPattern.AbstractFactoryDesignPattern
 {
     public class SportsVehicleFactory : IVehicleFactory
     {

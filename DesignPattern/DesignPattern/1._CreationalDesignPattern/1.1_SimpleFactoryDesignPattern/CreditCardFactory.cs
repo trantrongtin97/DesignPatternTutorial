@@ -1,7 +1,7 @@
 ﻿using DesignPattern.Object;
 using DesignPattern.Object.Interface;
 
-namespace DesignPattern.FactoryDesignPattern.SimpleFactoryDesignPattern
+namespace DesignPattern.CreationalDesignPattern.SimpleFactoryDesignPattern
 {
     public class CreditCardFactory
     {

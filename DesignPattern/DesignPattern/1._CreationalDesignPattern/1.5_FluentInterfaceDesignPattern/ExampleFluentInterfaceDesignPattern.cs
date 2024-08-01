@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.FluentInterfaceDesignPattern
+﻿namespace DesignPattern.CreationalDesignPattern.FluentInterfaceDesignPattern
 {
     public class ExampleFluentInterfaceDesignPattern
     {

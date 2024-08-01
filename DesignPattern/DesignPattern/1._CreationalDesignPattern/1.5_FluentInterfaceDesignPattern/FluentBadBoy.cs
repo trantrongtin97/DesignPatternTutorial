@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Object;
 
-namespace DesignPattern.FactoryDesignPattern.FluentInterfaceDesignPattern
+namespace DesignPattern.CreationalDesignPattern.FluentInterfaceDesignPattern
 {
     public class FluentBadBoy
     {

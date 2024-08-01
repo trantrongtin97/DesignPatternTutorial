@@ -1,104 +1,12 @@
-﻿using DesignPattern.FactoryDesignPattern.AbstractFactoryDesignPattern;
-using DesignPattern.FactoryDesignPattern.BuilderDesignPattern;
-using DesignPattern.FactoryDesignPattern.FactoryMethodDesignPattern;
-using DesignPattern.FactoryDesignPattern.FluentInterfaceDesignPattern;
-using DesignPattern.FactoryDesignPattern.SimpleFactoryDesignPattern;
-using DesignPattern.FactoryDesignPattern.SingletonDesignPattern.SimpleSingletonDesignPattern;
-using DesignPattern.FactoryDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern;
-using DesignPattern.StructuralDesignPattern.AdapterDesignPattern;
-using DesignPattern.StructuralDesignPattern.BridgeDesignPattern;
-using DesignPattern.StructuralDesignPattern.CompositeDesignPattern;
-using DesignPattern.StructuralDesignPattern.DecoratorDesignPattern;
-using DesignPattern.StructuralDesignPattern.FacadeDesignPattern;
-using DesignPattern.StructuralDesignPattern.FlyweightDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.CacheProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.FireWallProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.LoggingProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.RemoteProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.SmartReferenceProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.SynchronizationProxyDesignPattern;
-using DesignPattern.StructuralDesignPattern.ProxyDesignPattern.VirtualProxyDesignPattern;
+﻿using DesignPattern.BehavioralDesignPattern;
+using DesignPattern.CreationalDesignPattern;
+using DesignPattern.StructuralDesignPattern;
 
-ExampleSimpleFactoryDesignPattern exampleSimpleFactoryDesignPattern = new ExampleSimpleFactoryDesignPattern();
-exampleSimpleFactoryDesignPattern.Run();
+CreationalDesignPattern creationalDesignPattern = new CreationalDesignPattern();
+creationalDesignPattern.Basic();
 
-Console.WriteLine("**************************************************************************************************");
+StructuralDesignPattern structuralDesignPattern = new StructuralDesignPattern();
+await structuralDesignPattern.BasicAsync();
 
-ExampleFactoryMethodDesignPattern exampleFactoryMethodDesignPattern = new ExampleFactoryMethodDesignPattern();
-exampleFactoryMethodDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-
-ExampleAbstractFactoryDesignPattern exampleAbstractFactoryDesignPattern = new ExampleAbstractFactoryDesignPattern();
-exampleAbstractFactoryDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-
-ExampleBuilderDesignPattern exampleBuilderDesignPattern = new ExampleBuilderDesignPattern();
-exampleBuilderDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-
-ExampleFluentInterfaceDesignPattern exampleFluentInterfaceDesignPattern = new ExampleFluentInterfaceDesignPattern();
-exampleFluentInterfaceDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-
-ExampleSimpleSingletonDesignPattern exampleSimpleSingletonDesignPattern = new ExampleSimpleSingletonDesignPattern();
-exampleSimpleSingletonDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-
-ExampleThreadSafeSingletonDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleAdapterDesignPattern exampleAdapterDesignPattern = new ExampleAdapterDesignPattern();
-exampleAdapterDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleFacadeDesignPattern exampleFacadeDesignPattern = new ExampleFacadeDesignPattern();
-exampleFacadeDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleDecoratorDesignPattern exampleDecoratorDesignPattern = new ExampleDecoratorDesignPattern();
-exampleDecoratorDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleBridgeDesignPattern exampleBridgeDesignPattern = new ExampleBridgeDesignPattern();
-exampleBridgeDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleCompositeDesignPattern exampleCompositeDesignPattern = new ExampleCompositeDesignPattern();
-exampleCompositeDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleFlyweightDesignPattern exampleFlyweightDesignPattern = new ExampleFlyweightDesignPattern();
-exampleFlyweightDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleVirsualProxyDesignPattern exampleVirsualProxyDesignPattern = new ExampleVirsualProxyDesignPattern();
-exampleVirsualProxyDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleRemoteProxyDesignPattern exampleRemoteProxyPattern = new ExampleRemoteProxyDesignPattern();
-exampleRemoteProxyPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleCacheProxyDesignPattern exampleCacheProxyDesignPattern = new ExampleCacheProxyDesignPattern();
-exampleCacheProxyDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleLoggingProxyDesignPattern exampleLoggingProxyDesignPattern = new ExampleLoggingProxyDesignPattern();
-exampleLoggingProxyDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleSynchronizationProxyDesignPattern exampleSynchronizationProxyDesignPattern = new ExampleSynchronizationProxyDesignPattern();
-await exampleSynchronizationProxyDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleFireWallProxyDesignPattern exampleFireWallProxyDesignPattern = new ExampleFireWallProxyDesignPattern();
-exampleFireWallProxyDesignPattern.Run();
-
-Console.WriteLine("**************************************************************************************************");
-ExampleSmartReferenceProxyDesignPattern exampleSmartReferenceProxyDesignPattern = new ExampleSmartReferenceProxyDesignPattern();
-exampleSmartReferenceProxyDesignPattern.Run();
+BehavioralDesignPattern behavioralDesignPattern = new BehavioralDesignPattern();
+behavioralDesignPattern.Basic();

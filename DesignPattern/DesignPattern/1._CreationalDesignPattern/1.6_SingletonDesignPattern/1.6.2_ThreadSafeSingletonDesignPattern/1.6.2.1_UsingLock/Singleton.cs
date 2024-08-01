@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingLock
+﻿namespace DesignPattern.CreationalDesignPattern.SingletonDesignPattern.ThreadSafeSingletonDesignPattern.UsingLock
 {
     public sealed class Singleton
     {

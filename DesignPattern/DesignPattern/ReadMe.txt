@@ -9,3 +9,6 @@
 
 2. Structural Design Pattern: Trong dự án các object and class có các mối quan hệ liên kết với nhau. vd như user and product, 1 user có nhiều product với qan hệ one - many. 
 Sau này chúng ta muốn user và product độc lập với nhau, vì vậy loại bỏ mối qan hệ giữa chúng, nhưng lại không muốn thay đổi cấu trúc của project ==> Structural Design Pattern ra đời
+
+3. Behavioral Design Pattern: Là các thiết kế, xử lí việc giao tiếp, tương tác giữa các class và object. Mục tiêu là đảm bảo việc giao tiếp giữa chúng hiệu quả nhưng các class và object
+vẫn không ràng buộc vào nhau. Điều đó làm cho hệ thống linh hoạt và dễ dàng mở rộng cũng như quản lí

@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Object;
 
-namespace DesignPattern.FactoryDesignPattern.BuilderDesignPattern
+namespace DesignPattern.CreationalDesignPattern.BuilderDesignPattern
 {
     public abstract class ReportBuilder
     {

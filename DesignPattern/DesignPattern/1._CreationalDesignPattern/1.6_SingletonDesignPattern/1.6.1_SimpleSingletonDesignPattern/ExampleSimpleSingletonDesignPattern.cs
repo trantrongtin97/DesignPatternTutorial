@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.FactoryDesignPattern.SingletonDesignPattern.SimpleSingletonDesignPattern
+﻿namespace DesignPattern.CreationalDesignPattern.SingletonDesignPattern.SimpleSingletonDesignPattern
 {
     public class ExampleSimpleSingletonDesignPattern
     {

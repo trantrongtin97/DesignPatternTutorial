@@ -1,6 +1,6 @@
 ﻿using DesignPattern.Object.Interface;
 
-namespace DesignPattern.FactoryDesignPattern.AbstractFactoryDesignPattern.Interface
+namespace DesignPattern.CreationalDesignPattern.AbstractFactoryDesignPattern.Interface
 {
     public interface IVehicleFactory
     {
