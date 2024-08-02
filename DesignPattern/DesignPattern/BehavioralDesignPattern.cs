@@ -1,4 +1,6 @@
-﻿using DesignPattern.BehavioralDesignPattern.IteratorDesignPattern;
+﻿using DesignPattern.BehavioralDesignPattern.ChainofResponsibilityDesignPattern;
+using DesignPattern.BehavioralDesignPattern.IteratorDesignPattern;
+using DesignPattern.BehavioralDesignPattern.ObserverDesignPattern;
 
 namespace DesignPattern.BehavioralDesignPattern
 {
@@ -11,6 +13,14 @@ namespace DesignPattern.BehavioralDesignPattern
 
             ExampleIteratorDesignPattern exampleIteratorDesignPattern = new ExampleIteratorDesignPattern();
             exampleIteratorDesignPattern.Run();
+
+            Console.WriteLine("**************************************************************************************************");
+            ExampleObserverDesignPattern exampleobserverDesignPattern = new ExampleObserverDesignPattern();
+            exampleobserverDesignPattern.Run();
+
+            Console.WriteLine("**************************************************************************************************");
+            ExampleChainofResponsibilityDesignPattern exampleChainofResponsibilityDesignPattern = new ExampleChainofResponsibilityDesignPattern();
+            exampleChainofResponsibilityDesignPattern.Run();
         }
     }
 }
