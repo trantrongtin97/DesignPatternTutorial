@@ -1,0 +1,99 @@
+﻿=============================================================================Structural Design Pattern============================================================================
+
+When We Need:
+	- When the system have too many object and relationship of them, we need to change the structure of a class or the relationship among the classes, 
+		but we don’t want this change to be affected by the project 
+	- When we want to increases the system’s flexibility
+	- When we want to only necessary objects are in memory and being managed or used.
+
+Index:
+
+Adapter Design Pattern
+	- Sử dụng khi muốn phối hợp các đối tượng nhưng chúng ko tương thích vs nhau ( tức là ko thể kế thừa, khởi tạo hay giao tiếp vs nhau)
+	- Tuỳ vào trường hợp
+		Nếu có 1 class Java và muốn sử dụng chung vs class .NET. Bởi vì ko thể kế thừa => sử dụng Object Adapter Design Pattern 
+		Nếu 2 class chung 1 dự án, chung ngôn ngữ, có thể kế thừa					   => sử dụng Class Adapter Design Pattern
+
+	* Real Time Examples:
+	1.Language Translator
+
+Facade Design Pattern
+	- Sử dụng khi muốn đơn giản hóa 1 hệ thống con phức tạp. Hay dc dùng để tạo 1 API gọn hơn
+	- Các object trong dự án thực tế liên kết với nhau thực hiện 1 việc nào đó (
+		vd như phải có class User để class Validate thực hiện kiểm tra và class Send Mail hoạt động khi đã tạo dc User)
+		Khi code chúng ta phải new User -> new Validate -> new SendMail
+		Facade Design giúp gói gọn tất cả trong 1 bước (RegisterUser), 
+		khi thay đổi cấu trúc bất kì class nào liên qan (User,Validate,SendMail) thì chỉ cần thay đổi 1 class duy nhất (RegisterUser)
+
+	* Real Time Examples:
+	1.Gói gọn bất cứ công đoạn nào bằng 1 class
+
+ The Decorator Design Pattern
+	- Sử dụng khi muốn thêm chức năng cho các đối tượng mà không cần phân lớp 
+	- 1 Object bình thường sẽ có các property và các method có các chức năng riêng biệt. Không thể thay đổi trong thời gian chạy
+	- Decorator Design Pattern giúp chúng ta thêm chức năng hoặc sửa đổi chức năng trong thời gian chạy mà ko làm thay đổi các chức năng hiện có
+
+	* Real Time Examples:
+	1.Extension Systems
+	2.Module Systems
+
+Bridge Design Pattern
+	- Sử dụng khi muốn tách biệt việc triển khai 2 class liên qan nhau để hoạt động độc lập
+	- Chúng ta có 2 class : 
+		1 dùng nhận lệnh từ user và xử lí và quyết định sử dụng method nào của class 2
+		2 dùng nhận lệnh từ class 1, dựa vào đó mà xử lí lệnh đó
+		các class đó có thể kế thừa từ đó sẽ có N phiên bản của 2 class đó
+	- Pattern này giúp giảm liên kết mà vẫn đảm bảo việc sử dụng linh hoạt giữa 2 class
+
+	* Real Time Examples:
+	1.Send Message
+
+Composite Design Pattern
+	- Sử dụng khi muốn kết hợp các đối tượng thành 1 cấu trúc cây, giúp xử lí 1, nhiều hoặc tất cả đối tượng 1 cách thống nhất
+	- Class sẽ có thể được tạo thành từ nhiều class, nhiều thành phần -> các class và thành phần trong đó liên kết chặc chẽ vs class cha
+	- Pattern này giúp cấu trúc class đó riêng lẻ ko phụ thuộc class chính nhưng vẫn có thể sử dụng chúng 1 cách thống nhất mà ko nhất thiết phải có đủ thành phần
+	- Việc này giúp mở rộng 1 class, Object theo cấp số nhân ( được thấy chủ yếu ở các hệ thống tệp, UI Component,..)
+
+	* Real Time Examples:
+	2. Hierarchical Tree Structures (File and Folder structure hierarchy )
+
+Flyweight Design Pattern
+	- Sử dụng khi muốn giảm thiểu bộ nhớ sử dụng trong 1 chương trình yêu cầu 1 lượng lớn đối tượng tương tự nhau
+	- Thực tế, vd công việc cần in ra màng hình 1 hình tròn vs 1tr màu sắc khác nhua. Có 2 cách xử lí
+		1: Loop 1tr lần và tạo ra 1tr obj hình tròn vs 1tr màu khác nhau và in ra
+		2. Tạo 1 hình tròn ko màu, Loop 1 tr lần và mỗi lần fill 1 màu khác nhau vô hình tròn và in ra
+		==> cách 2 chính là tốt nhất vì tiết kiệm dc bộ nhớ vì chỉ new 1 obj. Đây chính là pattern này
+	- Pattern này giúp việc sử dụng bộ nhớ 1 cách hiệu quả, sử dụng khi cần khởi tạo nhiều object giống nhau hoặc gần giống nhau
+
+	* Real Time Examples:
+	1.A Text Editor
+	2.2D Computer-Aided Design (CAD) System
+
+Proxy Design Pattern
+	- Sử dụng như 1 đại diện của 1 đối tượng chính nhằm kiểm soát truy cập, quản lí hoạt động hoặc bảo mật
+
+	Remote Proxy:
+		When: Đối tượng chính nằm ở 1 nơi khác và chúng ta muốn user ko biết sự tồn tại thật sự của đối tượng chính, mọi giao tiếp đề được thông qa và thực hiện bởi Remote Proxy.
+		Purpose: Xử lí chi tiết các giao tiếp vs đối tượng chính, loại bỏ sự phức tạp ở client.
+	Virtual Proxy:
+		When: Muốn trì hoãn việc khởi tạo các đối tượng sử dụng nhiều tài nguyên cho đến khi thật sự cần đến chúng.
+		Purpose: Tối ưu hóa hiệu xuất (lazy initialization).
+	Protection Proxy:
+		When: Kiểm soát quyền truy cập vào 1 đối tượng hoặc tạo thêm 1 lớp bảo mật bổ sung
+		Purpose: Kiểm tra quyền truy cập, tăng cường bảo mật
+	Cache Proxy:
+		When: Các yêu cầu được lặp đi lặp lại cho cùng 1 đối tượng, chúng ta muốn cải thiệt hiệu xuất bằng cách lưu giữ đối tượng đó và tái sử dụng nó
+		Purpose: Tránh các hoạt động lặp đi lặp lại hay các đối tượng thường xuyên được sử dụng bị khởi tạo ở nhiều lần làm tiêu tốn tài nguyên 
+	Logging Proxy:
+		When: Muốn ghi lại hoạt động của các đối tượng 
+		Purpose: Kiểm soát hoặc debug
+	Monitoring or Synchronization Proxy:
+		When: Khi làm việc đa luồng và chúng ta muốn đảm bảo rằng đối tượng chỉ được truy cập 1 luồng tại 1 thời điểm
+		Purpose: Đảm bảo quyền truy cập đồng bộ vào 1 đối tượng thực tế ngăn ngừa Race Conditions 
+			(Race Conditions  :nghĩa là các object cũng truy cập vào 1 object dùng chung như global variable, File, static object)
+	Smart Reference Proxy:
+		When: Muốn thực hiện thêm các hành động bổ sung thêm hoặc quản lí (đếm lượt truy cập, đo tải, loại bỏ các object ko cần thiết khỏi bộ nhớ,..) khi truy cập vào object.
+		Purpose: Thực hiện các hoạt động trc và sau khi gọi các thao tác trên object
+	Firewall Proxy:
+		When: Bảo vệ tài nguyên khỏi các cuộc tấn công hoặc kiểm soát truy cập dữ liệu vào và ra
+		Purpose: Hoạt động như lớp trung gian để lọc các request đến hoặc đi dựa trên các rule dc xác định trc

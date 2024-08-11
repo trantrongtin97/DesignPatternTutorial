@@ -1,5 +1,5 @@
 ﻿using DesignPattern.Object;
-using DesignPattern.StructuralDesignPattern.AdapterDesignPattern.Interface;
+using DesignPattern.StructuralDesignPattern.AdapterDesignPattern.ClassAdapter.Interface;
 using System.Reflection;
 
 namespace DesignPattern.StructuralDesignPattern.AdapterDesignPattern.ClassAdapter

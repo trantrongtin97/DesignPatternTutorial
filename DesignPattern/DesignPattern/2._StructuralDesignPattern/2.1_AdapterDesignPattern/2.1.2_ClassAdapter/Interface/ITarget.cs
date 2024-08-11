@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.StructuralDesignPattern.AdapterDesignPattern.Interface
+﻿namespace DesignPattern.StructuralDesignPattern.AdapterDesignPattern.ClassAdapter.Interface
 {
     public interface ITarget
     {

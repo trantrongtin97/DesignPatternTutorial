@@ -1,6 +1,118 @@
-﻿Using Creatinal Design Pattern
+﻿=============================================================================Creatinal Design Pattern============================================================================
+	
+When We Need:
+	- When the system configuration needs to create various objects: 
+		These patterns can dynamically decide the class of an object that needs to be created based on the configuration or environment.
+	- When families of related objects are designed to be used together: 
+		Ensuring that objects that need to work together can be created using a particular design pattern.
+	- When you want to hide the implementation of an object pool: 
+		Managing the initialization and recycling of objects that are expensive to create (like connections to a database).
+	- Resource Management: 
+		Applications need to efficiently manage expensive or complex resources, ensuring that instances are created only when necessary and according to the current context.
 
-	- When the system configuration needs to create various objects: These patterns can dynamically decide the class of an object that needs to be created based on the configuration or environment.
-	- When families of related objects are designed to be used together: Ensuring that objects that need to work together can be created using a particular design pattern.
-	- When you want to hide the implementation of an object pool: Managing the initialization and recycling of objects that are expensive to create (like connections to a database).
-	- Resource Management: Applications need to efficiently manage expensive or complex resources, ensuring that instances are created only when necessary and according to the current context.
+
+
+Index:
+
+The Singleton Design Pattern
+	- Được sử dụng khi chúng ta muốn có 1 thực thể (instance) DUY NHẤT tồn tại trong ứng dụng và cần truy cập toàn cục
+	- Chỉ được khởi tạo khi cần (lazy initialization)
+	- Sẽ có vấn đề khi làm việc vơi đa luồng (multi-threading). Bỡi vì chỉ 1 thực thể tồn tại cho nên khi sử dụng vs đa luồng có thể xảy ra NullReferenceException
+	- Thường sử dụng làm: Global Resource, Config System, Cache
+
+	* Real-Time Examples
+	1.Exception Logging
+	2.Caching
+	3.Service Proxies
+	4.Database Connection Management
+	5.Load Balancers
+	6.Application Configuration Management
+	7.User Session Management
+	8.Application’s Theme Manager
+	9.System Information Gatherer
+	10.Notification Manager
+	11.Task Scheduler
+	12.Service Locator
+	13.Data Sharing
+	14.Application Counter Manager
+
+The Factory Method Design Pattern:
+	- Đơn giản là tạo ra interface và các class kế thừa từ nó. Từ đó các class đó khởi tạo qa đại diện của interface 
+	- ( DiamondFactory obj = new DiamondFactory() ) ==> ( ICreditCard obj = new DiamondFactory() )
+
+	* Real Time Examples
+	1.Payment Gateway Integration
+	2.Document Conversion System
+	3.Logging System
+	4.A Simple System to Handle Notifications
+	5.Discounts in an E-commerce Application
+	6.Transport Application
+	7.Developing a Graphics Editor
+	8.Designing a System for a Bank
+	9.Report Generation
+	10.Cloud Storage System
+	11.UI Theme System
+
+Real-Time Examples of the Factory Method Design Pattern
+	1.Notification System
+	2.Document Format Converters
+	3.Report Generators
+	4.Payment Gateway Integration
+	5.Logistics Application
+
+Real-Time Examples of the Abstract Factory Design Pattern
+	- Sử dụng khi muốn khởi tạo 1 nhóm đối tượng liên quan nhưng không biết đối tượng nào sẽ được tạo ra
+	- Một nhóm đối tưởng ở đây đương quản lí qua class ( vd: class có tên factory trong vd)
+
+	1.Payment Gateways in E-commerce
+	2.Cross-Platform UI Development
+	3.Vehicle Manufacturing Company
+	4.Cross-Platform Application Configuration
+	5.Furniture Shop
+	6.Managing Connections to Different Types of Databases
+	7.Multi-Device User Interfaces
+	8.Animal Kingdoms
+	9.Multimedia Software
+	10.Beverages
+
+Real-Time Examples of the Builder Design Pattern
+	- Khi 1 object có quá nhiều property, việc khởi tạo đối tượng đó sẽ phức tạp dần lên. 
+		Builder Design Pattern sẽ chi nhỏ qá trình khởi tạo object đó giúp cho việc khởi tạo objec dễ dàng hơn
+
+	1.Building a Complex Computer System
+	2.Building a Software for a Restaurant
+	3.Creating Complex Profile Objects for a User Registration System
+	4.Travel Agency where Users can Customize Holiday Packages
+	5.Creating a Configuration for a Server Deployment
+	6.StringBuilder
+	7.HttpRequestMessage
+
+Real-Time Examples of the Fluent Interface Design Pattern
+	- Sử dụng như 1 extension giúp cho việc khởi tạo đối tượng và thay đổi các giá trị của đối tượng đơn giản hơn
+
+	1.Automapper Implementation using Fluent Interface
+	2.FluentValidation
+	3.RestSharp for API Requests
+	4.Fluent SQL Query Builder
+	5.Fluent HTML Tag Builder
+	6.Fluent Shopping Cart Builder
+	7.Fluent User Profile Builder
+	8.Fluent Game Character Builder
+	9.Fluent Pizza Builder
+	10.Entity Framework Code First Model Properties Configuration
+	11.Fluent Email Builder
+
+Real-Time Examples of the Prototype Design Pattern
+	- Khởi tạo đối tượng bằng cách tạo ra 1 đối tượng nguyên mẫu (có sẵn mọi thứ mình cần của đối tượng đó). 
+		Từ đó các đối tượng loại này về sau khi được khởi tạo bằng cách sao chép từ nguyên mẫu
+	
+	1.Car Configurator Application
+	2.Design Firm that deals with Floor Plans of Buildings
+	3.Document Versioning System
+	4.Software Application for an Event Management Company
+	5.Building a User-Customizable GUI System
+	6.Graphics Editors
+	7.Database Record Duplication
+	8.Game Development
+	9.Configuration Templates
+	10.Historical States for Undo Actions

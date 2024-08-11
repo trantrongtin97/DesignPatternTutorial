@@ -1,48 +1,42 @@
 ﻿using DesignPattern.Object;
-using DesignPattern.StructuralDesignPattern.AdapterDesignPattern.Interface;
-using System.Reflection;
+using DesignPattern.StructuralDesignPattern.AdapterDesignPattern.ObjectAdapter.Interface;
 
 namespace DesignPattern.StructuralDesignPattern.AdapterDesignPattern.ObjectAdapter
 {
     public class EmployeeAdapter : ITarget
     {
-        public BusinessLayerService service = new BusinessLayerService();
-        public void ComparisionProcessSalary(dynamic[] arrEmployee)
+        BusinessLayerService businessLayerService = new BusinessLayerService();
+        public void ComparisionProcessSalary(string[,] employeesArray)
         {
-            List<Employee> employees = new List<Employee>();
-            foreach (dynamic item in arrEmployee)
+            string id = null;
+            string name = null;
+            string salary = null;
+            string dob = null;
+            List<Employee> listEmployee = new List<Employee>();
+            for (int i = 0; i < employeesArray.GetLength(0); i++)
             {
-                employees.Add(new Employee(GetValueObject(item, "Id") ?? 0, GetValueObject(item, "Name") ?? string.Empty, GetValueObject(item, "Salary") ?? 0, GetValueObject(item, "Dob") ?? DateTime.MinValue));
-            }
-            service.ProcessSalary(employees);
-        }
-        private object? GetValueObject(dynamic obj, string property)
-        {
-            try
-            {
-                return (GetPropertyValid(property)) ? obj.GetType().GetProperty(property).GetValue(obj, null) : null;
-            }
-            catch
-            {
-                return null;
-            }
-            
-        }
-        private bool GetPropertyValid(string property)
-        {
-            PropertyInfo[] lsProperty = new Employee().GetType().GetProperties();
-            foreach (PropertyInfo s in lsProperty)
-            {
-                if (property == s.Name)
+                for (int j = 0; j < employeesArray.GetLength(1); j++)
                 {
-                    return true;
+                    if (j == 0)
+                    {
+                        id = employeesArray[i, j];
+                    }
+                    else if (j == 1)
+                    {
+                        name = employeesArray[i, j];
+                    }
+                    else if (j == 2)
+                    {
+                        salary = employeesArray[i, j];
+                    }
+                    else
+                    {
+                        dob = employeesArray[i, j];
+                    }
                 }
+                listEmployee.Add(new Employee(Convert.ToInt32(id), name, Convert.ToDouble(salary), Convert.ToDateTime(dob)));
             }
-            return false;
-        }
-        private bool CheckPropertyNullable(Type type)
-        {
-            return (Nullable.GetUnderlyingType(type) != null);
+            businessLayerService.ProcessSalary(listEmployee);
         }
     }
 }

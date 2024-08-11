@@ -9,6 +9,7 @@ namespace DesignPattern.StructuralDesignPattern.AdapterDesignPattern
             foreach (Employee employee in employees)
             {
                 Console.WriteLine($"Employee : {employee.Name} : ${employee.Salary}");
+                Console.WriteLine($"Dob : {employee.Dob!.Value.ToShortDateString()}");
             }
         }
     }

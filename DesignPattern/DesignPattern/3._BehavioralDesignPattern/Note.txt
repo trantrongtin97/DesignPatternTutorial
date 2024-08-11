@@ -1,0 +1,137 @@
+﻿=============================================================================Behavioral Design Pattern============================================================================
+
+When we need:
+	- Change the behavior of a class, and again, we don’t want it to affect other classes of the project
+	- Flexibility in Interaction
+	- Ease of Maintenance
+	- Enhanced Control Flow
+
+Index:
+
+Chain of Responsibility Pattern:
+	- Cho phép 1 đối tượng gữi lệnh mà không cần biết đối tượng nào nhận và xử lí. Lệnh đó được truyền qa 1 chuỗi các trình xử lý cho đến khi 1 trong số chúng xử lí được lệnh
+
+	*Real-Time Examples
+	1.Logging System
+	2.Form Input Validation in a Web Application
+	3.Order Processing in an E-Commerce System
+
+Command Pattern:
+	- Biến 1 request thành 1 object cụ thể và độc lập chứa tất cả thông tin cần thiết đến thực hiện request
+	- Nó cho phép việc thực thi request đó dễ dàng, dễ quản lí và coding dễ hơn
+
+	*Real-Time Examples
+	1.Text Editor
+	2.Restaurant Order System
+	3.Smart Home System
+	4.E-Commerce Shopping Cart System
+
+Interpreter Pattern:
+	- Thường đc dùng như 1 phiên dịch để diễn giải từ 1 request đầu vào ko chuẩn thành 1 đầu ra hợp lệ và xử dụng được trong hệ thống
+	- Có thể hoạt động như 1 biên dịch tự động cho bất kì lại data nào
+	- Pattern này chính là nền tạo nên Complier của các trình biên dịch code hiện tại của chúng ta ( chuyển ngôn ngữ dev cấp cao -> ngôn ngữ máy)
+
+	*Real-Time Examples
+	1.Query Language for Filtering a Collection of Products
+	2.Text-Based Role-Playing Game (RPG)
+	3.Simple Markup Language
+
+Iterator Pattern:
+	- Cung cấp cách truy cập các phần tử trong object 1 cách tuần tự mà ko để lô nội dung cơ bản của nó
+	- Dùng tạo 1 colection với cách loop, check, define của riêng mình
+
+	*Real-Time Examples
+	1.Social Media Feed
+	2.Browsing Music Playlist
+	3.Restaurant Menu
+
+Mediator Pattern:
+	- Giảm sự phụ thuộc của nhiều object bằng cách làm cho chúng giao tiếp thông qa 1 object trung gian
+		giúp xử lí tốt hơn các giao tiếp phức tạp khó quản lý nếu thông qa giao tiếp trực tiếp
+	- Trong thực tế pattern được sử dụng như Room chat (mn gữi tn cho objec trung gian và object gữi cho ng cần thiết hoặc gữi đến tất cả mn)
+
+	*Real-Time Examples
+	1.Air Traffic Control (ATC)
+	2.Smart Home System
+	3.UI Framework
+	4.Stock Exchange
+	5.Job Portal
+	6.Chat Rooms
+	7.Game Lobby or Multiplayer Gaming
+	8.Decoupling Modules in Large Systems
+	9.Networking
+	10.Workflow Engines
+
+Memento Pattern:
+	- Lưu giữ và quản lí trạng thái của object mục đích để khôi phục khi cần thiết mà không vi phạm tính đóng gói
+	- Thực tế pattern này hay được sử dụng để làm chức năng khôi phục data trong hệ thống
+
+	*Real-Time Examples
+	1.Banking System
+	2.Text Editors
+	3.Drawing Board
+	4.Game Character’s State Management
+	5.Settings in a Software Application
+	6.Content Management System (CMS)
+	7.Shopping Cart System
+
+
+Observer Pattern:
+	- Hoạt động như 1 giám sát viên, nghĩa là nó giám sát 1 object, khi xảy ra 1 sự kiện nó phản hồi lại bằng các thực hiện các hành động được lên sẵn khi sự kiện đó xảy ra
+	- Vd thực tế: như thị trường chứng khoán, khi giá mã cổ phiếu A được cập nhật, pattern này gữi thông báo đến các nhà đầu tư đã mua mã cổ phiếu đó
+
+	*Real-Time Examples
+	1.Social Media Notification System
+	2.A News Publishing System
+	3.Stock Market Tracking System
+	4.JOB Portal System
+
+State Pattern:
+	- Cho phép object thay đổi hành vi của nó phụ thuộc vào trạng thái của nó
+	- Dùng đến quản lí trạng thái của các luồng điểu khiển phức tạp
+	- Vd thực tế: 1 con chatbot sẽ chữi bạn, cho bạn truy cập vào nhiều tài nguyên hơn nếu thấy trạng thái bạn là ng dùng cũ (quen mặt), 
+				hoặc chào bạn 1 cách giả trân, cho bạn xem nhiều qản cáo hơn khi thấy bạn 1 ng dùng mới (chân ướt chân ráo)
+
+	*Real-Time Examples
+	1.ATM Machine
+	2.Order Processing System
+	3.Product Lifecycle in an E-commerce Platform
+	4.Mobile Phone Ringer
+
+Strategy Pattern:
+	- Đóng gói 1 nhóm xử lí giúp cho chúng có thể hoán đổi độc lập cho nhau giữa client sử dụng
+	- vd thực tế: Có nhiều phương thức thanh toán (mỗi phương thức thanh toán có 1 cách xử lí thanh toán riêng) 
+					client có thể có nhiều hoặc 1 phương thức thanh toán và đồng thời có thể hoán đổi phương thức thanh toán của bản thân mình 
+					hoặc chuyển quyền thanh toán cho client khác (tạo ra 1 phương thức thanh toán chỉ thẳng đến 1 client)
+
+	*Real-Time Examples
+	1.Payment Methods
+	2.Shipping Cost Calculation
+	3.Discount Systems in an E-commerce Application
+	4.Text Filtering in a Chat Application
+
+Template Method Pattern:
+	- Định sẵn ra object có 1 thuật toán, cách xử lí, các bước thực hiện 1 công việc cụ thể. 
+		Các object kế thừa nó có thể ghi đè các bước nhưng ko thể thay đổi cấu trúc chính của của thuật toán
+	- vd cụ thể: Việc Pha 1 ly cà phê có các bước gồm: Nấu nước nóng, bỏ cà phê, thêm các phụ liệu, lắc cà phê
+					+ Trường hợp cà phê đen: Nấu nước nóng, bỏ cà phê: đắng, Thêm các phụ liệu: ko, sữa, lắc cà phê: ko
+					+ Trường hợp cà phê đen đá: Nấu nước nóng, bỏ cà phê: đắng, Thêm các phụ liệu: đường, đá, lắc cà phê: lắc nhẹ
+					+ Trường hợp cà phê sữa: Nấu nước nóng, bỏ cà phê: đắng, Thêm các phụ liệu: đường, đá, sữa, lắc cà phê: lắc mạnh
+
+	*Real-Time Examples
+	1.CI/CD Pipeline Execution
+	2.Planning a Trip
+	3.Online Shopping System
+	4.Test-Taking Platforms
+	5.Document Converter Tool
+
+Visitor Pattern:
+	- Đặt hành động vào 1 class gọi là visitor thay vì hành động đó nằm trong class có sẵn. class đó sẽ dc truyền vào method của vistor để cung cấp các tt cần thiết
+		Thay vì để client lựa chọn hành động thực hiện thì chúng ta để cho chính đối tượng đó quyết định
+	- Pattern này thường đi kèm 1 kỹ thuật được gọi là Double Dispatch ( invoke, this )
+
+	*Real-Time Examples
+	1.Online Shopping System
+	2.Ticket Pricing System
+	3.Postal Service System
+	4.Computer Parts Store
